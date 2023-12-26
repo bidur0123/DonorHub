@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:donor_hub/handler/providers.dart';
 import 'package:donor_hub/screen/Authentication/Signup/signup_page.dart';
 import 'package:donor_hub/screen/entering_screen/entering_page.dart';
+import 'package:donor_hub/screen/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fluttertoast/fluttertoast.dart';
@@ -43,15 +44,15 @@ class _LoginPageState extends State<LoginPage> {
 
         setState(() {
           if (isDonor) {
-            // var currentUser = Provider.of<providers>(context, listen: false)
-            //     .currentUser(datauser);
+            var currentUser = Provider.of<Providers>(context, listen: false)
+                .currentUser(datauser);
             // Navigator.push(
             //     context,
             //     MaterialPageRoute(
             //         builder: (context) => const TestStartingScreen()));
           } else {
-            // var currentUser = Provider.of<providers>(context, listen: false)
-            //     .currentUser(datauser);
+            var currentUser = Provider.of<Providers>(context, listen: false)
+                .currentUser(datauser);
             // Navigator.push(context,
             //     MaterialPageRoute(builder: (context) => const ContactDonor()));
           }
@@ -216,6 +217,28 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         child: const Text(
                             'Sign Up',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                            )),
+                      ),
+                      const SizedBox(height: 15),
+                      TextButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const TestStartingScreen()));
+                        },
+                        style: TextButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50.0),
+                          ),
+                          backgroundColor: const Color(0xFFDE2828),
+                          padding: const EdgeInsets.fromLTRB(60, 5, 70, 10),
+                        ),
+                        child: const Text(
+                            'Goto',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 18,
