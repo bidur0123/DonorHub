@@ -2,7 +2,6 @@ import 'package:donor_hub/screen/Drawer_screen/donor_drawer.dart';
 import 'package:donor_hub/utils/constants.dart';
 import 'package:flutter/material.dart';
 
-
 class TestStartingScreen extends StatelessWidget {
   const TestStartingScreen({super.key});
 
@@ -47,7 +46,7 @@ class TestStartingScreen extends StatelessWidget {
                       "A small preliminary test on whether it is suitable for donating blood for you, of course, other necessary procedures will be completed in the hospital. This is a test to speed up the process and keep you informed."),
                   const Spacer(), // 1/6
                   InkWell(
-                //    onTap: () => Get.to(() => QuizScreen()),
+                    //    onTap: () => Get.to(() => QuizScreen()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,

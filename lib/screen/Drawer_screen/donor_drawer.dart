@@ -1,4 +1,3 @@
-
 import 'package:donor_hub/screen/entering_screen/entering_page.dart';
 import 'package:donor_hub/screen/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +19,6 @@ class DonorDrawer extends StatelessWidget {
             child: ListView(
               children: <Widget>[
                 const UserAccountsDrawerHeader(
-                  //Color(0xff4367b1)
                   decoration: BoxDecoration(
                     color: Color(0xFF973030),
                   ),
@@ -29,7 +27,6 @@ class DonorDrawer extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 1,
                       fontWeight: FontWeight.w800,
-                      //color: Colors.grey[300],
                       color: Colors.black,
                     ),
                   ),
@@ -55,7 +52,7 @@ class DonorDrawer extends StatelessWidget {
                     // Update the state of the app
                     // ...
                     // Then close the drawer // transaction resuşt should be in profile page
-                  //  Navigator.push(context,   MaterialPageRoute(builder: (context) => ProfileScreen()));
+                    //  Navigator.push(context,   MaterialPageRoute(builder: (context) => ProfileScreen()));
                   },
                   leading: const Icon(
                     Icons.person,
@@ -76,7 +73,7 @@ class DonorDrawer extends StatelessWidget {
                     // Update the state of the app
                     // ...
                     // Then close the drawer // transaction resuşt should be in profile page
-                  //  Navigator.push(context,   MaterialPageRoute(builder: (context) => const TransactionResult()));
+                    //  Navigator.push(context,   MaterialPageRoute(builder: (context) => const TransactionResult()));
                   },
                   leading: const Icon(
                     Icons.pending_actions,
@@ -97,7 +94,7 @@ class DonorDrawer extends StatelessWidget {
                     // Update the state of the app
                     // ...
                     // Then close the drawer // transaction resuşt should be in profile page
-                 //   Navigator.push(context,   MaterialPageRoute(builder: (context) => const ShowRequest()));
+                    //   Navigator.push(context,   MaterialPageRoute(builder: (context) => const ShowRequest()));
                   },
                   leading: const Icon(
                     Icons.bloodtype_outlined,
@@ -118,7 +115,10 @@ class DonorDrawer extends StatelessWidget {
                     // Update the state of the app
                     // ...
                     // Then close the drawer
-                    Navigator.push(context,   MaterialPageRoute(builder: (context) => const TestStartingScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const TestStartingScreen()));
                   },
                   leading: const Icon(
                     Icons.check_circle_outline,
@@ -139,7 +139,10 @@ class DonorDrawer extends StatelessWidget {
                     // Update the state of the app
                     // ...
                     // Then close the drawer
-                    Navigator.push(context,   MaterialPageRoute(builder: (context) =>  EnteringPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => EnteringPage()));
                   },
                   leading: const Icon(
                     Icons.logout,
