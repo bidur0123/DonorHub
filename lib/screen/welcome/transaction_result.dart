@@ -16,7 +16,7 @@ List transactionList = [];
 
 class _TransactionResultState extends State<TransactionResult> {
   getAllTransactions() async {
-    print("wheree");
+  //  print("wheree");
     Uri myUri = Uri.parse(
         "http://192.168.1.30/bloodbuddy/allTransaction.php");
     var response = await http.get(myUri);
