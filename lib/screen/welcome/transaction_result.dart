@@ -34,7 +34,7 @@ class _TransactionResultState extends State<TransactionResult> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    getAllTransactions(); //list all suers
+    getAllTransactions(); //list all uers
   }
 
   @override

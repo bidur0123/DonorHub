@@ -33,7 +33,7 @@ class TestStartingScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Spacer(flex: 2), //2/6
+                  const Spacer(flex: 2),
                   Text(
                     "Blood Donation Eligibility Test",
                     style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -44,14 +44,13 @@ class TestStartingScreen extends StatelessWidget {
                   ),
                   const Text(
                       "A small preliminary test on whether it is suitable for donating blood for you, of course, other necessary procedures will be completed in the hospital. This is a test to speed up the process and keep you informed."),
-                  const Spacer(), // 1/6
+                  const Spacer(),
                   InkWell(
-                    //    onTap: () => Get.to(() => QuizScreen()),
+                  //      onTap: () => Get.to(() => QuizScreen()),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,
                       padding: const EdgeInsets.all(kDefaultPadding * 0.75),
-                      // 15
                       decoration: const BoxDecoration(
                         gradient: kPrimaryGradient,
                         borderRadius: BorderRadius.all(Radius.circular(12)),
@@ -65,7 +64,7 @@ class TestStartingScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Spacer(flex: 2), // it will take 2/6 spaces
+                  const Spacer(flex: 2),
                 ],
               ),
             ),
