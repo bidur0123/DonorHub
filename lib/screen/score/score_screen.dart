@@ -24,8 +24,6 @@ class ScoreScreen extends StatelessWidget {
             decoration: const BoxDecoration(
               image: DecorationImage(
                 opacity: .4,
-
-                // colorFilter: new ColorFilter.mode(Colors.red.withOpacity(0.2), BlendMode.dstATop),
                 image: AssetImage('assets/icons/bg.jpg'),
                 fit: BoxFit.fill,
               ),

@@ -2,6 +2,7 @@ import 'package:donor_hub/handler/providers.dart';
 import 'package:donor_hub/screen/entering_screen/entering_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,15 +15,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => Providers()), // Replace 'CHANGE_ME' with the actual implementation of your Providers class
-        // Add other providers as needed
+        ChangeNotifierProvider(create: (_) => Providers()),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.red,
         ),
-        debugShowCheckedModeBanner: false,
-        home: const EnteringPage(),
+        home: const GetMaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: EnteringPage(),
+        ),
       ),
     );
   }
