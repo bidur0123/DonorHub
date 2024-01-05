@@ -5,11 +5,9 @@ import 'package:donor_hub/screen/Authentication/Signup/signup_page.dart';
 import 'package:donor_hub/screen/entering_screen/entering_page.dart';
 import 'package:donor_hub/screen/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
-
 import 'package:provider/provider.dart';
 
 class LoginPage extends StatefulWidget {
@@ -30,7 +28,7 @@ class _LoginPageState extends State<LoginPage> {
     bool isDonor = Provider.of<Providers>(context).isDonor;
     String status = isDonor ? "Donor" : "Medical Personnel";
     Future<List?> login(bool isDonor) async {
-      Uri myUri = Uri.parse("http://192.168.1.30/bloodbuddy/donor_login.php");
+      Uri myUri = Uri.parse("http://192.168.1.30/bloodbuddy/donor_login");
       final response = await http.post(myUri, body: {
         "email": email.text,
         "password": password.text,
@@ -38,18 +36,18 @@ class _LoginPageState extends State<LoginPage> {
       });
       var datauser = json.decode(response.body);
 
-      if (datauser != '"hiçbir veri post edilmedi"') {
-        print("başarılı olmalı");
+      if (datauser != '"no data was posted"') {
+        print("must be successful");
         print(datauser);
 
         setState(() {
           if (isDonor) {
             var currentUser = Provider.of<Providers>(context, listen: false)
                 .currentUser(datauser);
-            // Navigator.push(
-            //     context,
-            //     MaterialPageRoute(
-            //         builder: (context) => const TestStartingScreen()));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const TestStartingScreen()));
           } else {
             var currentUser = Provider.of<Providers>(context, listen: false)
                 .currentUser(datauser);
@@ -163,21 +161,21 @@ class _LoginPageState extends State<LoginPage> {
                       TextButton(
                         onPressed: () async {
                           print(email.text);
-                      //    login(isDonor);
-
+                          login(isDonor);
                           try {
                             if (true) {
                               setState(() {});
                             } else {
                               Fluttertoast.showToast(
                                   msg:
-                                  "Şifre veya Email yanlış. Lütfen tekrar dene",
+                                  "Password or Email is incorrect. Please try again",
                                   toastLength: Toast.LENGTH_LONG,
                                   gravity: ToastGravity.BOTTOM,
                                   timeInSecForIosWeb: 1,
                                   backgroundColor: Colors.red,
                                   textColor: Colors.white,
-                                  fontSize: 20.0);
+                                  fontSize: 20.0
+                              );
                             }
                           } catch (e) {
                             print(e);

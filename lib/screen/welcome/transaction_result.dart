@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:donor_hub/screen/Drawer_screen/donor_drawer.dart';
 import 'package:flutter/material.dart';
 
 import 'package:http/http.dart' as http;
@@ -16,9 +17,8 @@ List transactionList = [];
 
 class _TransactionResultState extends State<TransactionResult> {
   getAllTransactions() async {
-  //  print("wheree");
-    Uri myUri = Uri.parse(
-        "http://192.168.1.30/bloodbuddy/allTransaction.php");
+    print("wheree");
+    Uri myUri = Uri.parse("http://192.168.1.30/bloodbuddy/allTransaction");
     var response = await http.get(myUri);
     if (response.statusCode == 200) {
       setState(() {
@@ -40,7 +40,7 @@ class _TransactionResultState extends State<TransactionResult> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // drawer: DonorDrawer(),
+       drawer: const DonorDrawer(),
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(171, 39, 39, 1.0),
         title: const Text('Past Actions '),

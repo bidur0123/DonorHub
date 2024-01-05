@@ -33,11 +33,11 @@ class _SignUpState extends State<SignUp> {
     bool isDonor = Provider.of<Providers>(context).isDonor;
 
     Future<List?> register() async {
-      var url = "http://192.168.1.30/bloodbuddy/donor_register.php";
+      var url = "http://192.168.1.30/bloodbuddy/donor_register";
 
-      var url_donor = "http://192.168.1.30/bloodbuddy/donor.php";
-      var url_staff = "http://192.168.1.30/bloodbuddy/hospital_staff.php";
-      var url_blodd = "http://192.168.1.30/bloodbuddy/blood.php";
+      var url_donor = "http://192.168.1.30/bloodbuddy/donor";
+      var url_staff = "http://192.168.1.30/bloodbuddy/hospital_staff";
+      var url_blodd = "http://192.168.1.30/bloodbuddy/blood";
       Uri myUri = Uri.parse(url);
       Uri myUri_donor = Uri.parse(url_donor);
       Uri myUri_staff = Uri.parse(url_staff);
