@@ -82,7 +82,7 @@ class _ContactDonorState extends State<ContactDonor> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: StaffDrawer(),
+      drawer: const StaffDrawer(),
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(171, 39, 39, 1.0),
