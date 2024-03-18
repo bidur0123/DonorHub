@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 
-//for hospital personnel
+//for hospital personnel page
 class RequestBlood extends StatefulWidget {
   const RequestBlood({super.key});
 
@@ -54,7 +54,6 @@ class _RequestBloodState extends State<RequestBlood> {
 
     var urlBlood = "http://192.168.1.30/bloodbuddy/blood_recipient";
     Uri myUri_blood = Uri.parse(urlBlood);
-    //connect to register.php file
     Uri myUri = Uri.parse(url);
     var response;
     String recepient = "Recipient";
